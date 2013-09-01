@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        .output { font-weight: bold;}
+        #payment {text-decoration: underline;}
+        #graph { border: solid black 1px;}
+        th,td { vertical-align: top;}
+    </style>
+    <script src="1.js"></script>
+    <script src="save.js"></script>
+    <script src="onload.js"></script>
+</head>
+<body>
+<table>
+    <tr><th>Enter load data</th>
+    <th> loan balance, Cumulative Equity and interest payments </th></tr>
+
+    <tr><td> Amount of the loan ($):</td>
+    <td><input id="amount" onchange="calculate();"></td>
+    <td rowspan="8">
+    <canvas id="graph" width="400" height="250"></canvas></td></tr>
+
+    <tr><td>Annual interest ( $ ): </td>
+    <td> <input id="apr" onchange="calculate();"></td></tr>
+
+    <tr><td>Repayment period (years)</td>
+    <td><input id="years" onchange="calculate();"></td></tr>
+
+    <tr><td>Zipcode ( to find letters )</td>
+    <td><input id="zipcode" onchange="calculate();"></td></tr>
+
+    <tr><th>Approximate payments:</th>
+    <td><button onclick="calculate()">Calculate</button></td></tr>
+
+    <tr><td>Monthly payment</td>
+    <td>$<span class="output" id="payment"></span></td></tr>
+
+    <tr>
+        <td>Total payment:</td>
+        <td>$<span class="output" id="total"></span></td>
+    </tr>
+
+    <tr>
+        <td>Total interest:</td>
+        <td>$<span class="output" id="totalinterest"></span> </td>
+    </tr>
+
+    <tr>
+        <th>Sponsors:</th>
+        <td colspan="2">
+            Apply for ypu loan with one of these fine leaders:
+            <div id="lenders"></div>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>
