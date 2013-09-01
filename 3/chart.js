@@ -6,12 +6,12 @@
 
 function chart(principal, interest, monthly, payments){
     var graph = document.getElementById("graph");
-    console.log(graph);
+    //console.log(graph);
     graph.width = graph.width; //magic!!
 
-    if (arguments.length == 0 || !graph.getContext()) {
+    if (arguments.length == 0 || !graph.getContext) {
         console.log("arguments.length="+arguments.length);
-        console.log("graph.getContext()="+graph.getContext());
+        console.log("graph.getContext()="+graph.getContext);
         console.log("smtg wrng");
         return;
     }
@@ -33,7 +33,7 @@ function chart(principal, interest, monthly, payments){
     g.fillText("Total interest Payments", 20,20);
 
     var equity = 0;
-    d.beginPath();
+    g.beginPath();
     g.moveTo(paymentToX(0),amountToY(0));
     for (var p =1; p<=payments;p++){
         var thisMonthsInterest = (principal-equity)*interest;
