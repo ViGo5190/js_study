@@ -11,16 +11,20 @@
     <script src="1.js"></script>
     <script src="save.js"></script>
     <script src="onload.js"></script>
+    <script src="chart.js"></script>
 </head>
 <body>
 <table>
     <tr><th>Enter load data</th>
     <th> loan balance, Cumulative Equity and interest payments </th></tr>
 
-    <tr><td> Amount of the loan ($):</td>
-    <td><input id="amount" onchange="calculate();"></td>
-    <td rowspan="8">
-    <canvas id="graph" width="400" height="250"></canvas></td></tr>
+    <tr>
+        <td> Amount of the loan ($):</td>
+        <td><input id="amount" onchange="calculate();"></td>
+        <td rowspan="8">
+            <canvas id="graph" width="400" height="250"></canvas>
+        </td>
+    </tr>
 
     <tr><td>Annual interest ( $ ): </td>
     <td> <input id="apr" onchange="calculate();"></td></tr>

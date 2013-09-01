@@ -25,7 +25,7 @@ function calculate() {
         total.innerHTML = (monthly*payments).toFixed(2);
         totalinterest.innerHTML = ((monthly*payments)-principal).toFixed(2);
 
-        save(amount.value, apr.value, years.valueOf,  zipcode.value);
+        save(amount.value, apr.value, years.value,  zipcode.value);
 
         /* ff */
         chart(principal, interest, monthly, payments);
